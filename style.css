@@ -1,6 +1,7 @@
 html,
 body {
   margin: 0;
+  scroll-padding-top: 96px;
 }
 
 .reborn-landing,
@@ -59,10 +60,17 @@ body {
   .reborn-landing .rl-navbar {
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 100;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     background: rgba(16, 15, 47, .86);
     backdrop-filter: blur(18px);
+    transition: background .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+
+  .reborn-landing .rl-navbar.is-scrolled {
+    border-color: rgba(255, 255, 255, .16);
+    background: rgba(16, 15, 47, .94);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .22);
   }
 
   .reborn-landing .rl-nav-inner {
