@@ -1,0 +1,612 @@
+html,
+body {
+  margin: 0;
+}
+
+.reborn-landing,
+  .reborn-landing * {
+    box-sizing: border-box;
+  }
+
+  .reborn-landing {
+    --navy: #100f2f;
+    --purple: #2b173d;
+    --maroon: #8f2f2d;
+    --cream: #f8ead3;
+    --cream-2: #fff7ea;
+    --gold: #ffd36d;
+    --orange: #ff7f28;
+    --green: #20c463;
+    --text: #fff8ed;
+    --muted: #e7d3bd;
+    --dark: #221527;
+    --line: rgba(255, 255, 255, .16);
+    --shadow: 0 24px 70px rgba(0, 0, 0, .28);
+    width: 100%;
+    margin: 0;
+    color: var(--text);
+    background: linear-gradient(135deg, var(--navy), var(--purple) 42%, var(--maroon));
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  .reborn-landing img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+  }
+
+  .reborn-landing a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .reborn-landing p,
+  .reborn-landing h1,
+  .reborn-landing h2,
+  .reborn-landing h3,
+  .reborn-landing ul {
+    margin-top: 0;
+  }
+
+  .reborn-landing .rl-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .reborn-landing .rl-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    background: rgba(16, 15, 47, .86);
+    backdrop-filter: blur(18px);
+  }
+
+  .reborn-landing .rl-nav-inner {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .reborn-landing .rl-logo img {
+    width: min(260px, 54vw);
+  }
+
+  .reborn-landing .rl-nav-menu {
+    display: flex;
+    gap: 24px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .reborn-landing .rl-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 14px 23px;
+    border-radius: 999px;
+    font-weight: 900;
+    line-height: 1;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .reborn-landing .rl-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .reborn-landing .rl-btn-primary {
+    color: #2b173d;
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    box-shadow: 0 16px 34px rgba(255, 127, 40, .26);
+  }
+
+  .reborn-landing .rl-btn-outline {
+    color: var(--cream-2);
+    border: 1px solid rgba(255, 255, 255, .24);
+    background: rgba(255, 255, 255, .06);
+  }
+
+  .reborn-landing .rl-light-section .rl-btn-outline {
+    color: var(--purple);
+    border-color: rgba(43, 23, 61, .22);
+    background: rgba(43, 23, 61, .05);
+  }
+
+  .reborn-landing .rl-hero {
+    min-height: calc(100vh - 82px);
+    display: flex;
+    align-items: center;
+    padding: 78px 0 64px;
+  }
+
+  .reborn-landing .rl-hero-grid,
+  .reborn-landing .rl-product-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 56px;
+  }
+
+  .reborn-landing .rl-eyebrow,
+  .reborn-landing .rl-tag,
+  .reborn-landing .rl-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .reborn-landing .rl-eyebrow {
+    margin-bottom: 20px;
+    color: var(--gold);
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .09);
+  }
+
+  .reborn-landing .rl-tag,
+  .reborn-landing .rl-badge {
+    margin-bottom: 14px;
+    color: #6f332d;
+    background: rgba(255, 211, 109, .45);
+  }
+
+  .reborn-landing h1 {
+    margin-bottom: 22px;
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: .98;
+    letter-spacing: -2px;
+    font-weight: 900;
+  }
+
+  .reborn-landing h1 span,
+  .reborn-landing .rl-price {
+    color: var(--gold);
+  }
+
+  .reborn-landing .rl-light-section h2,
+  .reborn-landing .rl-light-section h3,
+  .reborn-landing .rl-benefit-card h3,
+  .reborn-landing .rl-price-card h3 {
+    color: var(--dark);
+  }
+
+  .reborn-landing h2 {
+    margin-bottom: 14px;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.08;
+    font-weight: 900;
+  }
+
+  .reborn-landing h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 900;
+  }
+
+  .reborn-landing .rl-hero-lead,
+  .reborn-landing .rl-section-title p,
+  .reborn-landing .rl-product-copy p,
+  .reborn-landing .rl-price-card p,
+  .reborn-landing .rl-cta-card p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .reborn-landing .rl-light-section .rl-section-title p,
+  .reborn-landing .rl-product-copy p,
+  .reborn-landing .rl-price-card p,
+  .reborn-landing .rl-benefit-card p {
+    color: #654f47;
+  }
+
+  .reborn-landing .rl-pain-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 28px 0;
+  }
+
+  .reborn-landing .rl-pain-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .08);
+    font-weight: 800;
+  }
+
+  .reborn-landing .rl-x-icon,
+  .reborn-landing .rl-check-icon,
+  .reborn-landing .rl-benefit-icon {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 900;
+  }
+
+  .reborn-landing .rl-x-icon {
+    background: linear-gradient(135deg, #e95a47, #a52e2e);
+  }
+
+  .reborn-landing .rl-check-icon,
+  .reborn-landing .rl-benefit-icon {
+    background: linear-gradient(135deg, #2ea36b, #16784b);
+  }
+
+  .reborn-landing .rl-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 26px;
+  }
+
+  .reborn-landing .rl-book-card,
+  .reborn-landing .rl-product-cover {
+    padding: 26px;
+    border: 1px solid var(--line);
+    border-radius: 32px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04));
+    box-shadow: var(--shadow);
+  }
+
+  .reborn-landing .rl-book-card img {
+    border-radius: 18px;
+    transform: perspective(900px) rotateY(-8deg) rotateX(2deg);
+  }
+
+  .reborn-landing .rl-section {
+    padding: 82px 0;
+  }
+
+  .reborn-landing .rl-light-section {
+    color: var(--dark);
+    background: linear-gradient(180deg, var(--cream), var(--cream-2));
+  }
+
+  .reborn-landing .rl-product-section {
+    background: #170f2d;
+  }
+
+  .reborn-landing .rl-section-title {
+    max-width: 780px;
+    margin: 0 auto 42px;
+    text-align: center;
+  }
+
+  .reborn-landing .rl-benefit-grid,
+  .reborn-landing .rl-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .reborn-landing .rl-benefit-card,
+  .reborn-landing .rl-price-card {
+    min-width: 0;
+    padding: 26px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .92);
+    color: var(--dark);
+    box-shadow: 0 18px 45px rgba(34, 21, 39, .08);
+  }
+
+  .reborn-landing .rl-benefit-card *,
+  .reborn-landing .rl-price-card * {
+    color: inherit;
+  }
+
+  .reborn-landing .rl-benefit-icon {
+    margin-bottom: 18px;
+    color: #fff;
+  }
+
+  .reborn-landing .rl-price-card .rl-price {
+    color: var(--gold);
+  }
+
+  .reborn-landing .rl-price-card.rl-featured {
+    color: #fff;
+    background: linear-gradient(135deg, var(--purple), var(--maroon));
+  }
+
+  .reborn-landing .rl-price-card.rl-featured h3,
+  .reborn-landing .rl-price-card.rl-featured .rl-price {
+    color: #fff;
+  }
+
+  .reborn-landing .rl-price-card.rl-featured p {
+    color: var(--muted);
+  }
+
+  .reborn-landing .rl-price {
+    margin: 8px 0 10px;
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 900;
+  }
+
+  .reborn-landing .rl-price small {
+    font-size: 22px;
+  }
+
+  .reborn-landing .rl-check-list,
+  .reborn-landing .rl-bonus-list {
+    display: grid;
+    gap: 14px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .reborn-landing .rl-check-list li,
+  .reborn-landing .rl-bonus-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .reborn-landing .rl-bonus-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 38px;
+  }
+
+  .reborn-landing .rl-payment-box {
+    display: grid;
+    gap: 22px;
+    margin-top: 34px;
+    padding: 30px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .92);
+    color: var(--dark);
+    box-shadow: 0 18px 45px rgba(34, 21, 39, .08);
+  }
+
+  .reborn-landing .rl-payment-copy {
+    max-width: 720px;
+  }
+
+  .reborn-landing .rl-payment-copy h3 {
+    color: var(--dark);
+  }
+
+  .reborn-landing .rl-payment-copy p {
+    margin-bottom: 0;
+    color: #654f47;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .reborn-landing .rl-payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .reborn-landing .rl-payment-card {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid rgba(34, 21, 39, .1);
+    border-radius: 20px;
+    background: var(--cream-2);
+  }
+
+  .reborn-landing .rl-payment-card span,
+  .reborn-landing .rl-payment-card strong,
+  .reborn-landing .rl-payment-card p {
+    display: block;
+  }
+
+  .reborn-landing .rl-payment-card span {
+    color: #654f47;
+    font-weight: 800;
+  }
+
+  .reborn-landing .rl-payment-card strong {
+    margin: 8px 0 6px;
+    color: var(--purple);
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.1;
+    font-weight: 900;
+    word-break: break-word;
+  }
+
+  .reborn-landing .rl-payment-card p {
+    margin-bottom: 0;
+    color: #654f47;
+  }
+
+  .reborn-landing .rl-bonus-card,
+  .reborn-landing .rl-cta-card {
+    padding: 34px;
+    border-radius: 28px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--purple), var(--maroon));
+  }
+
+  .reborn-landing .rl-footer {
+    padding: 42px 0;
+    color: var(--muted);
+    background: #0d0c24;
+  }
+
+  .reborn-landing .rl-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .reborn-landing .rl-footer img {
+    width: min(230px, 52vw);
+  }
+
+  .reborn-landing .rl-testimonial-hero {
+    background: radial-gradient(circle at top left, rgba(255, 211, 109, .2), transparent 34%),
+      linear-gradient(135deg, var(--navy), var(--purple) 44%, var(--maroon));
+  }
+
+  .reborn-landing .rl-testimonial-hero .rl-section-title {
+    margin-bottom: 0;
+  }
+
+  .reborn-landing .rl-testimonial-hero h1 {
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .reborn-landing .rl-testimonial-stack {
+    display: grid;
+    gap: 28px;
+  }
+
+  .reborn-landing .rl-testimonial-card {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    padding: clamp(26px, 4vw, 46px);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .94);
+    color: var(--dark);
+    box-shadow: 0 20px 55px rgba(34, 21, 39, .1);
+  }
+
+  .reborn-landing .rl-testimonial-card h2 {
+    color: var(--dark);
+  }
+
+  .reborn-landing .rl-testimonial-body {
+    display: grid;
+    gap: 16px;
+    color: #4f3e39;
+    font-size: 18px;
+    line-height: 1.78;
+  }
+
+  .reborn-landing .rl-testimonial-body p {
+    margin-bottom: 0;
+  }
+
+  .reborn-landing .rl-testimonial-author {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(34, 21, 39, .14);
+    color: #3d2d35;
+  }
+
+  .reborn-landing .rl-testimonial-author strong,
+  .reborn-landing .rl-testimonial-author span {
+    display: block;
+  }
+
+  .reborn-landing .rl-testimonial-author strong {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .reborn-landing .rl-testimonial-author span {
+    margin-top: 6px;
+    color: #654f47;
+  }
+
+  .reborn-landing .rl-testimonial-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .reborn-landing .rl-float-wa {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 30;
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--green);
+    box-shadow: 0 14px 35px rgba(32, 196, 99, .35);
+    font-size: 28px;
+    font-weight: 900;
+  }
+
+  @media (max-width: 980px) {
+    .reborn-landing .rl-hero-grid,
+    .reborn-landing .rl-product-grid,
+    .reborn-landing .rl-bonus-wrap {
+      grid-template-columns: 1fr;
+    }
+
+    .reborn-landing .rl-benefit-grid,
+    .reborn-landing .rl-pricing-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    .reborn-landing .rl-container {
+      width: min(100% - 28px, 1180px);
+    }
+
+    .reborn-landing .rl-nav-menu,
+    .reborn-landing .rl-nav-inner > .rl-btn {
+      display: none;
+    }
+
+    .reborn-landing .rl-nav-inner {
+      min-height: 72px;
+    }
+
+    .reborn-landing .rl-hero {
+      min-height: 0;
+      padding: 54px 0 48px;
+    }
+
+    .reborn-landing .rl-benefit-grid,
+    .reborn-landing .rl-pricing-grid,
+    .reborn-landing .rl-payment-grid,
+    .reborn-landing .rl-pain-box {
+      grid-template-columns: 1fr;
+    }
+
+    .reborn-landing h1 {
+      font-size: 42px;
+      letter-spacing: -1px;
+    }
+
+    .reborn-landing .rl-testimonial-body {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .reborn-landing .rl-footer-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
