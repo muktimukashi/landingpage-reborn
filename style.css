@@ -97,6 +97,41 @@ body {
     white-space: nowrap;
   }
 
+  .reborn-landing .rl-menu-toggle {
+    width: 46px;
+    height: 46px;
+    display: none;
+    place-items: center;
+    gap: 5px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 14px;
+    color: var(--cream-2);
+    background: rgba(255, 255, 255, .08);
+    cursor: pointer;
+  }
+
+  .reborn-landing .rl-menu-toggle span {
+    width: 20px;
+    height: 2px;
+    display: block;
+    border-radius: 999px;
+    background: currentColor;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .reborn-landing .rl-navbar.is-menu-open .rl-menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .reborn-landing .rl-navbar.is-menu-open .rl-menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .reborn-landing .rl-navbar.is-menu-open .rl-menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
   .reborn-landing .rl-btn {
     display: inline-flex;
     align-items: center;
@@ -588,9 +623,43 @@ body {
       width: min(100% - 28px, 1180px);
     }
 
-    .reborn-landing .rl-nav-menu,
     .reborn-landing .rl-nav-inner > .rl-btn {
       display: none;
+    }
+
+    .reborn-landing .rl-menu-toggle {
+      display: grid;
+    }
+
+    .reborn-landing .rl-nav-menu {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      top: calc(100% + 10px);
+      display: grid;
+      gap: 4px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 18px;
+      background: rgba(16, 15, 47, .96);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, .28);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-8px);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .reborn-landing .rl-navbar.is-menu-open .rl-nav-menu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .reborn-landing .rl-nav-menu a {
+      padding: 13px 14px;
+      border-radius: 12px;
+      color: var(--cream-2);
+      background: rgba(255, 255, 255, .06);
     }
 
     .reborn-landing .rl-nav-inner {
